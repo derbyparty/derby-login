@@ -3,6 +3,7 @@
 - Auth module for Derby.js
 - Derby 0.6 version is the only supported
 - Written in pure js
+- Email/Password and OAuth 2.0 providers
 - Uses projections (data stored in one collection)
 - All routes starts with '/auth/*'
 - Bootstrap 3 components (Login, Register, ChangePassword)
@@ -11,6 +12,7 @@
 
 ## Known Issues
 - Does not work with Derby 0.3 and 0.5
+- No support for OAuth 1.0 providers (ex. [passport-twitter](https://github.com/jaredhanson/passport-twitter))
 - No 'Reset password'
 - No built-in access control (maybe it`s better to create another module for this)
 - No tests
