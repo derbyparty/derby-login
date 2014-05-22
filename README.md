@@ -3,6 +3,7 @@
 - Auth module for Derby.js
 - Derby 0.6 version is the only supported
 - Written in pure js
+- Uses [Passortjs](http://passportjs.org/)
 - Email/Password and OAuth 2.0 providers
 - Uses projections (data stored in one collection)
 - All routes starts with '/auth/*'
@@ -27,13 +28,41 @@ npm install derby-login
 ```
 var derbyLogin = require('derby-login');
 ```
-#### Step 2. Connect Middleware
+#### Step 2. Options
+```
+var options = {
+  collection: 'auths', // db collection
+  publicCollection: 'users', // projection of db collection
+  passport: {}, // passportjs options
+  strategies: { // passportjs strategies
+    provider1: {
+      strategy: require('passport-provider1').Strategy,
+      conf: {
+        clientID: 'clientID',
+        clientSecret: 'clientSecret',
+      }
+    },
+    provider2: {
+      strategy: require('passport-provider2').Strategy,
+      conf: {
+        clientID: 'clientID',
+        clientSecret: 'clientSecret',
+      }
+    }
+  },
+  user: { // projection
+    id: true
+  }
+}
+```
+
+#### Step 3. Middleware
 ```
   .use(express.bodyParser()) //should be upper
   .use(derbyLogin.middleware(options))
 ```
 
-#### Step 3. Routes
+#### Step 4. Routes
 ```
 derbyLogin.routes(expressApp, store);
 ```
