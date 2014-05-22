@@ -31,7 +31,7 @@ var derbyLogin = require('derby-login');
   .use(derbyLogin.middleware(options))
 ```
 
-### Step 3. Routes
+#### Step 3. Routes
 ```
 derbyLogin.routes(expressApp, store);
 ```
