@@ -3,6 +3,7 @@ var validation = require('../../lib/validation');
 
 module.exports = ChangePassword;
 function ChangePassword() {};
+ChangePassword.prototype.name = 'auth:changepassword';
 ChangePassword.prototype.view = __dirname;
 
 ChangePassword.prototype.create = function(model) {

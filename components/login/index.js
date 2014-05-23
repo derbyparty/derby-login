@@ -3,6 +3,7 @@ var validation = require('../../lib/validation');
 
 module.exports = Login;
 function Login() {}
+Login.prototype.name = 'auth:login';
 Login.prototype.view = __dirname;
 
 Login.prototype.create = function(model) {

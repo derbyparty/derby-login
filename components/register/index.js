@@ -3,6 +3,7 @@ var validation = require('../../lib/validation');
 
 module.exports = Register;
 function Register() {};
+Register.prototype.name = 'auth:register';
 Register.prototype.view = __dirname;
 
 Register.prototype.create = function(model) {
