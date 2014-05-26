@@ -73,7 +73,7 @@ derbyLogin.routes(expressApp, store);
 
 ## The MIT License
 
-Copyright (c) 2013 Vladimir Makhaev
+Copyright (c) 2014 Vladimir Makhaev
 
 Permission is hereby granted, free of charge, 
 to any person obtaining a copy of this software and 
