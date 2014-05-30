@@ -16,6 +16,7 @@
 - No support for OAuth 1.0 providers (ex. [passport-twitter](https://github.com/jaredhanson/passport-twitter))
 - No 'Reset password'
 - No built-in access control (maybe it`s better to create another module for this)
+- If you have more than one page, you should subscribe '_session.user' [by yourself](https://github.com/derbyparty/derby-login/issues/3)
 - No tests
 
 ### Installation
