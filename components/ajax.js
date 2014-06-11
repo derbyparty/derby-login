@@ -6,7 +6,7 @@ module.exports = function(url, data, model) {
     .send(data)
     .end(function(res) {
       if (res.ok) {
-        if (res.body.success) window.location = '/';
+        if (res.body.success) window.location = res.body.url;
         else model.set('errors', res.body)
       } else {
         model.set('errors.error', res.text);
