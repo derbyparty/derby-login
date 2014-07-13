@@ -60,12 +60,7 @@ var options = {
 #### Step 3. Middleware
 ```
   .use(express.bodyParser()) //should be upper
-  .use(derbyLogin.middleware(options))
-```
-
-#### Step 4. Routes
-```
-derbyLogin.routes(expressApp, store);
+  .use(derbyLogin.middleware(store, options))
 ```
 
 ### Example
