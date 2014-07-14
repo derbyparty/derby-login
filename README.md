@@ -51,6 +51,7 @@ var options = {
       }
     }
   },
+  redirect: true, // Redirect all no authenticated requests to passport.failureRedirect
   user: { // projection
     id: true
   }
