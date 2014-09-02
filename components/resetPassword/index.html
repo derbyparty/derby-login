@@ -1,0 +1,24 @@
+<index:>
+
+  {{if !success}}
+    <form id="auth-resetpassword" role="form" on-submit="submit()">
+
+      <div class="form-group {{if errors.password}}has-error{{/if}}">
+        <input type='password' class="form-control" placeholder="New Password" value="{{password}}" on-blur="blur('password')" />
+        <p class="help-block">{{errors.password}}</p>
+      </div>
+
+      <div class="form-group {{if errors.confirm}}has-error{{/if}}">
+        <input type='password' class="form-control" placeholder="Confirm Password" value="{{confirm}}" on-blur="blur('confirm')" />
+        <p class="help-block">{{errors.confirm}}</p>
+      </div>
+
+      <p class="text-danger">{{errors.error}}</p>
+
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Change" disabled="{{disabled}}" />
+
+    </form>
+  {{else}}
+    <p>Your password has been changed.</p>
+    <a href="/" class="btn btn-primary btn-lg btn-block">Sign In</a>
+  {{/if}}

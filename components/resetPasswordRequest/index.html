@@ -1,0 +1,18 @@
+<index:>
+
+  {{if !success}}
+    <form id="auth-resetpassword-req" role="form" on-submit="submit()">
+
+      <div class="form-group {{if errors.email}}has-error{{/if}}">
+        <input type='email' class="form-control" placeholder="Email" value="{{email}}" on-blur="blur('email')" />
+        <p class="help-block">{{errors.email}}</p>
+      </div>
+
+      <p class="text-danger">{{errors.error}}</p>
+
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Reset" disabled="{{disabled}}" />
+
+    </form>
+  {{else}}
+    <p>A password reset link has been sent. Please check your email inbox.</p>
+  {{/if}}
