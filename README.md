@@ -20,17 +20,17 @@
 - No tests
 
 ### Installation
-```
+```javascript
 npm install derby-login
 ```
 
 ### Setting
 #### Step 1. Require
-```
+```javascript
 var derbyLogin = require('derby-login');
 ```
 #### Step 2. Options
-```
+```javascript
 var options = {
   collection: 'auths', // db collection
   publicCollection: 'users', // projection of db collection
@@ -62,7 +62,7 @@ var options = {
 ```
 
 #### Step 3. Middleware
-```
+```javascript
   .use(express.bodyParser()) //should be upper
   .use(derbyLogin.middleware(store, options))
 ```
