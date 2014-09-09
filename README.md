@@ -35,9 +35,8 @@ var options = {
   collection: 'auths', // db collection
   publicCollection: 'users', // projection of db collection
   passport: {}, // passportjs options
-  // Use bcrypt for pasword hashing. Defauls to `true`.
-  // If set to `false` then SHA-1 + salt will be used
-  bcrypt: true,
+  // password hashing algorithm
+  encrypt: 'sha-1', // or 'bcrypt'
   strategies: { // passportjs strategies
     provider1: {
       strategy: require('passport-provider1').Strategy,

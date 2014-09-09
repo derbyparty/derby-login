@@ -8,7 +8,7 @@ describe('util', function() {
   describe('hash', function() {
     it('should hash using bcrypt when bcrypt is `true`', function(done) {
       var opts = {
-        bcrypt: true
+        encrypt: 'bcrypt'
       };
       util.hash(opts, password, function(err, hashedPassword, salt) {
         expect(err).equal(undefined);
@@ -21,7 +21,7 @@ describe('util', function() {
 
     it('should hash using SHA-1 and return salt when bcrypt is `false`', function(done) {
       var opts = {
-        bcrypt: false
+        encrypt: 'sha-1'
       };
       util.hash(opts, password, function(err, hashedPassword, salt) {
         expect(err).equal(undefined);
@@ -36,7 +36,7 @@ describe('util', function() {
   describe('compare', function() {
     it('using bcrypt should return `true` if the password matches', function(done) {
       var opts = {
-        bcrypt: true
+        encrypt: 'bcrypt'
       };
       // First hash
       util.hash(opts, password, function(err, hashedPassword, salt) {
@@ -52,7 +52,7 @@ describe('util', function() {
 
     it('using bcrypt should return `false` if the password doesnt matches', function(done) {
       var opts = {
-        bcrypt: true
+        encrypt: 'bcrypt'
       };
       // First hash
       util.hash(opts, password, function(err, hashedPassword, salt) {
@@ -68,7 +68,7 @@ describe('util', function() {
 
     it('using SHA-1 should return `true` if the password matches', function(done) {
       var opts = {
-        bcrypt: false
+        encrypt: 'sha-1'
       };
       // First hash
       util.hash(opts, password, function(err, hashedPassword, salt) {
@@ -84,7 +84,7 @@ describe('util', function() {
 
     it('using SHA-1 should return `false` if the password dosent match', function(done) {
       var opts = {
-        bcrypt: false
+        encrypt: 'sha-1'
       };
       // First hash
       util.hash(opts, password, function(err, hashedPassword, salt) {
