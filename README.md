@@ -56,7 +56,11 @@ var options = {
   redirect: true, // Redirect all no authenticated requests to passport.failureRedirect
   user: { // projection
     id: true
-  }
+  },
+  urlWhiteList: [ // public URLs: they won't be blocked by the session middleware
+    '/api',
+    '/usr/downloads'
+  ]
 }
 ```
 
