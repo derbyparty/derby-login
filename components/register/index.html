@@ -1,24 +1,24 @@
 <index:>
 
-  <form id="auth-register" role="form" on-submit="submit()">
+  <form role="form" on-submit="submit()">
 
-    <div class="form-group {{if errors.email}}has-error{{/if}}">
-      <input type='text' class="form-control" placeholder="Email" value="{{email}}" autofocus=true on-blur="blur('email')" />
-      <p class="help-block">{{errors.email}}</p>
+    <div class="form-group">
+      <input type='text' class="form-control" placeholder="{{emailText || 'Email'}}" value="{{email}}" autofocus=true />
+      <p class="help-block"></p>
     </div>
 
-    <div class="form-group {{if errors.password}}has-error{{/if}}">
-      <input type='password' class="form-control" placeholder="Password" value="{{password}}" on-blur="blur('password')" />
-      <p class="help-block">{{errors.password}}</p>
+    <div class="form-group">
+      <input type='password' class="form-control" placeholder="{{passwordText || 'Password'}}" value="{{password}}" />
+      <p class="help-block"></p>
     </div>
 
-    <div class="form-group {{if errors.confirm}}has-error{{/if}}">
-      <input type='password' class="form-control" placeholder="Confirm Password" value="{{confirm}}" on-blur="blur('confirm')" />
-      <p class="help-block">{{errors.confirm}}</p>
+    <div class="form-group">
+      <input type='password' class="form-control" placeholder="{{confirmText || 'Confirm Password'}}" value="{{confirm}}" />
+      <p class="help-block"></p>
     </div>
 
-    <p class="text-danger">{{errors.error}}</p>
+    <p class="text-danger">{{error}}</p>
 
-    <input type="submit" class="btn btn-primary btn-block" value="Register" disabled="{{disabled}}" />
+    <input type="submit" class="btn btn-primary btn-block" value="{{text || 'Register'}}" disabled="{{error || sending}}" />
 
   </form>

@@ -3,11 +3,6 @@
   <form role="form" on-submit="submit()">
 
     <div class="form-group">
-      <input type='password' class="form-control" placeholder="{{oldpasswordText || 'Old Password'}}" value="{{oldpassword}}" />
-      <p class="help-block"></p>
-    </div>
-
-    <div class="form-group">
       <input type='password' class="form-control" placeholder="{{passwordText || 'New Password'}}" value="{{password}}" />
       <p class="help-block"></p>
     </div>
@@ -19,6 +14,6 @@
 
     <p class="text-danger">{{error}}</p>
 
-    <input type="submit" class="btn btn-primary btn-block" value="{{text || 'Change'}}" disabled="{{error || sending}}" />
+    <input type="submit" class="btn btn-primary btn-block" value="{{text || 'Reset'}}" disabled="{{error || sending}}" />
 
   </form>

@@ -1,0 +1,14 @@
+<index:>
+
+  <form role="form" on-submit="submit()">
+
+    <div class="form-group">
+      <input type='text' class="form-control" placeholder="{{emailText || 'Email'}}" value="{{email}}" autofocus=true />
+      <p class="help-block"></p>
+    </div>
+
+    <p class="text-danger">{{error}}</p>
+
+    <input type="submit" class="btn btn-primary btn-block" value="{{text || 'Recover'}}" disabled="{{error || sending}}" />
+
+  </form>
