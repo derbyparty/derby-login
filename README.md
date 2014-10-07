@@ -19,6 +19,9 @@
 - No built-in access control (use [share-access](https://github.com/dmapper/share-access))
 - You have only userId in '_session.userId', and you should subscribe to user in router by yourself, [example](https://github.com/derbyparty/derby-login/issues/3)
 
+## Migration from 0.2
+- set `{encryption: 'sha-1', hashField: 'passwordHash'}` in options
+
 ### Installation
 ```javascript
 npm install derby-login
