@@ -4,7 +4,7 @@
 - Email/Password and [Passport](http://passportjs.org/) OAuth providers
 - Uses projections (data stored in one collection)
 - All routes start with '/auth/*'
-- Bootstrap 7 components (change email, change password, login, logout, recover password, register, reset password)
+- Bootstrap 3 components (change email, change password, login, logout, recover password, register, reset password)
 - Custom components (forms) are supported by parse-request hooks
 - Routes for confirmation of registration and email change
 - Hooks (sending emails, parse-request, request, response, error)
