@@ -8,7 +8,7 @@
 - Custom components (forms) are supported by parse-request hooks
 - Routes for confirmation of registration and email change
 - Hooks (sending emails, parse-request, request, response, error)
-- Bcrypt (default) and Sha-1 encryption
+- Bcrypt (default), Scrypt and Sha-1 encryption
 - Powerful server-side API
 - No jQuery dependency
 - Tests
