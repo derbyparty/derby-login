@@ -12,7 +12,9 @@
     "extend": "~1.2.1",
     "ms": "^0.6.2",
     "passport": "~0.2.1",
-    "superagent": "~0.19.1"
+    "superagent": "~0.19.1",
+    "scrypt": "*",
+    "scryptsy": "*"
   },
   "devDependencies": {
     "jshint": "*",
