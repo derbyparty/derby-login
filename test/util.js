@@ -1,5 +1,5 @@
 var racer = require('racer');
-var Memory = require('livedb-memory-mongo');
+var Memory = require('livedb-mongo-memory');
 var bcrypt = require('bcryptjs');
 var derbyLogin = require('../lib');
 var minFactor = 4;
