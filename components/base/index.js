@@ -21,7 +21,7 @@ Base.prototype.submit = function() {
     var data = {};
     for (var i = 0; i < this.fields.length; i++) {
       var field = this.fields[i];
-      data[field] = this.model.get(field);
+      data[field] = this.model.get(field) || document.getElementById(field + 'Input').value;
     }
     this.send(data);
   } else {
