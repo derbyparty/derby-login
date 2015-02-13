@@ -19,7 +19,8 @@ describe('register', function() {
   });
 
   it('should register', function(done) {
-    derbyLogin.register(email, password, userData, function(err, userId) {
+    var req = {session: {userId: model.id()}};
+    derbyLogin.register(req, email, password, userData, function(err, userId) {
       assert(!err);
       var $user = model.at('auths.' + userId);
       model.fetch($user, function() {
@@ -34,7 +35,8 @@ describe('register', function() {
 
   it('should not register when user with email exist', function(done) {
     model.add('auths', {email: email}, function() {
-      derbyLogin.register(email, password, userData, function(err) {
+      var req = {session: {userId: model.id()}};
+      derbyLogin.register(req, email, password, userData, function(err) {
         assert(err);
         done();
       });
