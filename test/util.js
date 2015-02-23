@@ -21,7 +21,7 @@ module.exports = {
     return derbyLogin;
   },
   email: function() {
-    return gen() + '@' + gen() + '.ru';
+    return (gen() + '@' + gen() + '.ru').toLowerCase();
   },
   hash: function(password) {
     return bcrypt.hashSync(password, minFactor);
