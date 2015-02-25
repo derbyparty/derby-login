@@ -55,6 +55,7 @@ Base.prototype.send = function(data) {
             model.del(field);
           }
         }
+        self.model.set('success', true);
         self.emit('success', data);
       }
     } else {
