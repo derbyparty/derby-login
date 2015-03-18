@@ -19,7 +19,7 @@
   "devDependencies": {
     "jshint": "*",
     "mocha": "*",
-    "racer": "0.6.0-alpha24 ",
+    "racer": "*",
     "livedb-mongo-memory": "*"
   },
   "repository": {
