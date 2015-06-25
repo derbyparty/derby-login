@@ -40,7 +40,7 @@ Base.prototype.send = function(data) {
 
   model.set('sending', true);
 
-  ajax('/auth/' + this.name.substr(5), data, function(res) {
+  ajax('/auth/' + this.route, data, function(res) {
     model.del('sending');
     if (!res.ok) return error(res.text);
 
