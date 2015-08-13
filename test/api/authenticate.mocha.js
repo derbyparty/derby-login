@@ -22,7 +22,7 @@ describe('authenticate', function() {
 
   it('should authenticate', function(done) {
     derbyLogin.authenticate(email, password, function(err, id) {
-      assert(!err);
+      assert.equal(err, undefined);
       assert.equal(id, userId);
       done();
     });
