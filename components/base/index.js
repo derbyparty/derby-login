@@ -45,7 +45,7 @@ Base.prototype.send = function(data) {
     if (!res.ok) return error(res.text);
 
     if (res.body.success) {
-      var redirectUrl = res.body.url;
+      var redirectUrl = self.model.get('redirectUrl') || res.body.url;
       if (redirectUrl) {
         window.location = redirectUrl;
       } else {
