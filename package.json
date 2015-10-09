@@ -1,6 +1,6 @@
 {
   "name": "derby-login",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "description": "Auth plugin for Derby",
   "main": "lib",
   "scripts": {
