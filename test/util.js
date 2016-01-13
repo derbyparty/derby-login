@@ -16,7 +16,7 @@ function gen()
 
 module.exports = {
   init: function(options) {
-    var store = racer.createStore({db: new Memory()});
+    var store = racer.createBackend({db: new Memory()});
     derbyLogin.middleware(store, options);
     return derbyLogin;
   },
