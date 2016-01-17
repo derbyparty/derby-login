@@ -4,7 +4,7 @@
   "description": "Auth plugin for Derby",
   "main": "lib",
   "scripts": {
-    "test": "./node_modules/.bin/mocha \"test/**/*.mocha.js\"; ./node_modules/.bin/jshint components/**/*.js lib/**/*.js test/**/*.js"
+    "test": "jshint components/base components/changeEmail components/changePassword components/login components/logout components/recoverPassword components/register components/resetPassword lib/api lib/crypt lib/hooks lib/middleware test/api && mocha test/api"
   },
   "dependencies": {
     "bcrypt": "^0.8.0",

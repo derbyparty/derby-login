@@ -1,5 +1,4 @@
 var racer = require('racer');
-var Memory = require('livedb-mongo-memory');
 var bcrypt = require('bcryptjs');
 var derbyLogin = require('../lib');
 var minFactor = 4;
@@ -16,7 +15,7 @@ function gen()
 
 module.exports = {
   init: function(options) {
-    var store = racer.createStore({db: new Memory()});
+    var store = racer.createBackend();
     derbyLogin.middleware(store, options);
     return derbyLogin;
   },
