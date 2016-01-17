@@ -15,8 +15,8 @@ function gen()
 
 module.exports = {
   init: function(options) {
-    var store = racer.createBackend();
-    derbyLogin.middleware(store, options);
+    var backend = racer.createBackend();
+    derbyLogin.middleware(backend, options);
     return derbyLogin;
   },
   email: function() {

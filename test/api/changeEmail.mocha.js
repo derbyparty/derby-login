@@ -8,14 +8,14 @@ describe('changeEmail', function() {
   var email = null;
 
   beforeEach(function(done) {
-    model = derbyLogin.store.createModel();
+    model = derbyLogin.backend.createModel();
     email = util.email();
     var user = {
       email: email,
       local: {}
     }
     userId = model.add('auths', user, function() {
-      model = derbyLogin.store.createModel();
+      model = derbyLogin.backend.createModel();
       done();
     });
   });

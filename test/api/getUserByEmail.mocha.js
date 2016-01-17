@@ -7,7 +7,7 @@ describe('getUserByEmail', function() {
   var email = null;
 
   beforeEach(function(done) {
-    var model = derbyLogin.store.createModel();
+    var model = derbyLogin.backend.createModel();
     email = util.email();
     var user = {
       email: email

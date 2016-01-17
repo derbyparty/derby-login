@@ -8,7 +8,7 @@ describe('authenticate', function() {
   var password = null;
 
   beforeEach(function(done) {
-    var model = derbyLogin.store.createModel();
+    var model = derbyLogin.backend.createModel();
     email = util.email();
     password = util.password();
     var user = {

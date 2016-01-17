@@ -9,7 +9,7 @@ describe('register', function() {
   var userData = null;
 
   beforeEach(function(done) {
-    model = derbyLogin.store.createModel();
+    model = derbyLogin.backend.createModel();
     email = util.email();
     password = util.password();
     userData = {

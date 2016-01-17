@@ -7,7 +7,7 @@ describe('getUserBySecret', function() {
   var secret = null;
 
   beforeEach(function(done) {
-    var model = derbyLogin.store.createModel();
+    var model = derbyLogin.backend.createModel();
     secret = model.id();
     var user = {
       local: {

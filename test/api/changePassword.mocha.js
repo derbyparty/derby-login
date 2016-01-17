@@ -8,7 +8,7 @@ describe('changePassword', function() {
   var password = null;
 
   beforeEach(function(done) {
-    model = derbyLogin.store.createModel();
+    model = derbyLogin.backend.createModel();
     password = util.password();
     var user = {
       local: {
@@ -16,7 +16,7 @@ describe('changePassword', function() {
       }
     }
     userId = model.add('auths', user, function() {
-      model = derbyLogin.store.createModel();
+      model = derbyLogin.backend.createModel();
       done();
     });
   });

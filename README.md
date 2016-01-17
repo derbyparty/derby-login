@@ -39,7 +39,7 @@ var options = {};
 
 #### Step 3. Middleware
 ```javascript
-  .use(derbyLogin.middleware(store, options))
+  .use(derbyLogin.middleware(backend, options))
 ```
 
 ### Example
