@@ -20,7 +20,7 @@
     "jshint": "*",
     "mocha": "*",
     "racer": "*",
-    "livedb-mongo-memory": "*"
+    "sharedb-mingo": "*"
   },
   "repository": {
     "type": "git",

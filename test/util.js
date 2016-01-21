@@ -3,6 +3,7 @@ var bcrypt = require('bcryptjs');
 var derbyLogin = require('../lib');
 var minFactor = 4;
 var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var Mingo = require('sharedb-mingo');
 
 function gen()
 {
@@ -14,8 +15,8 @@ function gen()
 }
 
 module.exports = {
-  init: function(options) {
-    var backend = racer.createBackend();
+  init: function(options) {``
+    var backend = racer.createBackend({db:new Mingo()});
     derbyLogin.middleware(backend, options);
     return derbyLogin;
   },
