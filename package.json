@@ -7,20 +7,22 @@
     "test": "jshint components/base components/changeEmail components/changePassword components/login components/logout components/recoverPassword components/register components/resetPassword lib/api lib/crypt lib/hooks lib/middleware test/api && mocha test/api"
   },
   "dependencies": {
-    "bcrypt": "^0.8.0",
-    "bcryptjs": "^2.0.2",
     "extend": "~1.2.1",
     "ms": "^0.6.2",
     "passport": "~0.2.1",
-    "superagent": "~0.19.1",
-    "scrypt": "*",
-    "scryptsy": "*"
+    "superagent": "~0.19.1"
   },
   "devDependencies": {
     "jshint": "*",
     "mocha": "*",
     "racer": "*",
     "sharedb-mingo": "*"
+  },
+  "peerDependencies": {
+    "bcrypt": "*",
+    "bcryptjs": "*",
+    "scrypt": "*",
+    "scryptsy": "*"
   },
   "repository": {
     "type": "git",
