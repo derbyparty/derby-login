@@ -3,12 +3,12 @@
   <form role="form" on-submit="submit()">
 
     <div class="form-group">
-      <input type='text' class="form-control" placeholder="{{emailText || 'Email'}}" value="{{email}}" autofocus=true />
+      <input as="emailInput" type='text' class="form-control" placeholder="{{emailText || 'Email'}}" value="{{email}}" autofocus=true />
       <p class="help-block"></p>
     </div>
 
     <div class="form-group">
-      <input type='password' class="form-control" placeholder="{{passwordText || 'Password'}}" value="{{password}}" />
+      <input as="passwordInput" type='password' class="form-control" placeholder="{{passwordText || 'Password'}}" value="{{password}}" />
       <p class="help-block"></p>
     </div>
 
