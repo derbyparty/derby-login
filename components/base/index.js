@@ -31,6 +31,8 @@ Base.prototype.submit = function() {
 
 Base.prototype.send = function(data) {
   var model = this.model;
+  var redirect = this.page.params.query.redirect;
+  var query = {redirect: redirect};
   var self = this;
 
   function error(message) {
@@ -40,7 +42,7 @@ Base.prototype.send = function(data) {
 
   model.set('sending', true);
 
-  ajax('/auth/' + this.route, data, function(res) {
+  ajax('/auth/' + this.route, query, data, function(res) {
     model.del('sending');
     if (!res.ok) return error(res.text);
 
